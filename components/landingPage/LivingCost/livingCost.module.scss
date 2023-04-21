@@ -1,0 +1,32 @@
+@mixin singleCoseMixin {
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 7px auto;
+    border-left: 3px solid #556b2f;
+}
+
+
+.singleCostHeader{
+    @include singleCoseMixin();
+    background-color: #556b2f;
+    color: white;
+}
+
+.singleCost{
+    @include singleCoseMixin();
+
+    span{
+        flex-basis: 50%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    .singleCost{
+        font-size: 16px;
+    }
+}

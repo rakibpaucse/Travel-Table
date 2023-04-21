@@ -1,0 +1,129 @@
+.container{
+    width: 100%;
+    padding-top: 4rem;
+}
+
+.explorer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.fromTo{
+    width: 60%;
+    position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.fromBoxContainer{
+    width: 50%;
+    text-align: end;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(80px);
+}
+
+.fromBox > p{
+    font-size: 18px;
+    padding-bottom: 14px;
+    text-align: center
+}
+
+.fromBoxSearch{
+    display: flex; 
+    justify-content: center;
+    position: relative;
+
+    &>div{
+        
+        &>img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    &>input {
+        background-color: #f6d9dc;
+        outline: none;
+        border: none;
+        padding: 1.2rem 2.5rem;
+        border-radius: 0px 5px 5px 0px;
+    }
+}
+
+
+.explorerBtn{
+    text-align: center;
+    width: 100%;
+
+    & > p{
+        padding: .5rem 1.5rem;
+        background-color: rgb(1, 112, 1);
+        color: white;
+        width: 250px;
+        margin: 0 auto;
+        border-radius: 5px;
+        font-size: 20px;
+
+
+        &:hover{
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: rgb(2, 70, 2);
+        }
+    }
+}
+
+.exploreImg{
+    text-align: center;
+    width: 50%;
+    & > img {
+        width: 80%;
+        height: 70%;
+    }
+}
+
+@media only screen and (max-device-width: 1700px) {
+    .fromBoxContainer{
+        transform: translateX(50px)
+    }
+}
+
+@media only screen and (max-device-width: 1500px) {
+    .fromBoxContainer{
+        transform: translateX(0px)
+    }
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    .explorer{
+        display: block;
+    }
+    .fromTo{
+        width: 100%;
+        display: block;
+    }
+    .exploreImg{
+        width: 100%;
+    }
+
+    .fromBoxContainer{
+        width: 100%;
+
+        .fromBox {
+            padding-bottom: 20px;
+        }
+    }
+    .fromToImage{
+        display: none;
+    }
+    .fromBoxSearch{
+        justify-content: center !important;
+    }
+}

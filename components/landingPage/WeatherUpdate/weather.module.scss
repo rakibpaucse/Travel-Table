@@ -1,0 +1,31 @@
+.weatherHolder{
+
+    .title{
+        width: 100%;
+        text-align: center;
+        background-color: #483d8b;
+        color: white;
+        font-size: 2.3rem;
+        padding: 10px 0;
+        border-radius: 7px 7px 0px 0px;
+    }
+
+    .chartholder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        transform: translateX(-25px);
+
+        div{
+            display: flex;
+            justify-content: center;
+        }
+    }
+} 
+
+@media only screen and (max-device-width: 480px) {
+    .weatherHolder{
+        overflow-x: hidden;
+    }
+}

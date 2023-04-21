@@ -1,0 +1,206 @@
+@mixin centerThings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 100px; 
+    background-color: #f8efef;
+    padding: 0px 8rem;
+
+    @include centerThings()
+}
+
+.infoHolder{
+    @include centerThings();
+    flex-grow: 1;
+}
+
+.iconHolder{
+    cursor: pointer;
+    display: none;
+}
+
+.logoImage{
+    width: 250px;
+    height: 62px;
+    border: 1px solid #b54756;
+}
+
+.navators{
+    @include centerThings();
+
+    & > a{
+        margin-right: 10px;
+        font-size: 2.2rem;
+        cursor: pointer;
+    }
+}
+
+.infoHolderForMobile{
+    background: #fff4f5;
+    z-index: 100;
+    position: absolute;
+    width: 95%;
+    top: 1.8rem;
+    right: 1rem;
+    padding: 1rem 1rem 2rem;
+    border: 1px solid #808080;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    .icon{
+        text-align: end;
+        cursor: pointer;
+    }
+
+    .mobileMenuHolder{
+        p{
+            padding: 30px;
+            text-align: justify;
+        }
+    }
+
+    .mobileMenu{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+        a{
+            color: forestgreen;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Footer
+
+.footer{
+    width: 100%;
+    background-color: #f8efef;
+    padding: 30px 5% 60px;
+    margin-bottom: 5px;
+    overflow-x: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &:first-child{
+        width: 20%;
+    }
+
+
+    .footerInput{
+        position: relative;
+        p{
+            font-size: 25px;
+            margin: 8px 0;
+            font-family: "Eczar", serif;
+            color: #b34856;
+        }
+
+        input{
+            width: 100%;
+            padding: 15px 50px;
+            outline: none;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            box-shadow: 9px 9px 16px rgba(163,177,198,.6),
+                        -9px -9px 16px hsla(0,0%,100%,.5),
+                        inset 3px 3px 7px rgba(136,165,191,.48),
+                        inset -3px -3px 7px #fff;
+            background-color: #f8efef;
+        } 
+
+        .subsBtn{
+            padding: 0.8rem 1.8rem;
+            background-color: #fff3ee;
+            margin: 12px 0 5px;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            border: 1px solid #ce4807;
+            color: #ce4807;
+            line-height: 1;
+            
+            text-align: center;
+
+            position: absolute;
+            right: 0;
+
+            &:hover{
+                background: #ffdccc;
+            }
+        }
+    }
+
+    .footerMenu{
+        a{
+            margin: 0px 8px;
+            font-size: 25px;
+            color: #b24755;
+            font-weight: bolder;
+        }
+    }
+
+    .footerBottom{
+        margin: 10px 0;
+    }
+
+    .footerCopyright{
+        text-align: end;
+        font-size: 11px;
+        a{
+            color: #b24755;
+        }
+    }
+}
+
+
+@media only screen and (max-device-width: 1300px) {
+    .header{
+        padding: 0px 4rem;
+    }
+    
+}
+
+@media only screen and (max-device-width: 500px) {
+    .header{
+        padding: 0px 2rem;
+    }
+    .logoImage{
+        width: 180px;
+        height: 50px;
+    }
+
+    .infoHolder{
+        display: none;
+    }
+    .iconHolder{
+        display: block;
+    }
+    
+    .footerMenu{
+        display: none;
+    }
+    .footer{
+        justify-content: center;
+        .footerInput{
+            p{
+                padding-top: 20px;
+            }
+            .subsBtn{
+                width: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,328 @@
+$dark: #000;
+
+.sectionHolder{
+    padding: 2rem 8rem;
+    width: 100%;
+    background-color: #ebecf0;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 40px;
+  }
+
+.sampleTitle{
+    font-family: "Eczar", serif;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 8px; 
+    font-size: 30px;
+}
+
+.feedBackHolder{
+    .title{
+        background: #483d8b;
+    }
+}
+
+.testimonialHolder{
+    margin-top: 80px;
+    position: relative;
+    .title{
+        background: #2f4f4f;
+    }
+}
+
+.slide{
+
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: inset 2px 2px 5px #babecc,inset -5px -5px 10px #fff;
+
+    width: 450px;
+    position: relative;
+
+    &::before{
+        content: "\201C";
+        position: absolute;
+        font-size: 150px;
+        top: -40px;
+        left: 30px;
+        color: #c4c4c470;
+    }
+
+    &::after{
+        content: "\201D";
+        position: absolute;
+        font-size: 150px;
+        bottom: 50px;
+        right: 30px;
+        color: #c4c4c470;
+    }
+
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15px 0;
+    }
+    p:first-child{
+        font-family: "Eczar", serif;
+        padding: 4px 10px;
+        text-align: center;
+        background-color: #d2691e;
+        font-size: 20px;
+        border-radius: 8px;
+        color: white;
+        z-index: -5;
+    }
+    p:last-child{
+        padding: 4px 10px;
+        text-align: center;
+        // background-color: rgb(255, 248, 237);
+        border-radius: 8px;
+        box-shadow: -5px -5px 20px #fff,5px 5px 20px #babecc;
+        z-index: -5;
+    }
+}
+
+.imgHolder{
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+// 
+
+.formHolder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .titleHolder{
+        width: 100%;
+        background: #242648;
+        justify-content: center;
+        display: flex;
+        color: white;
+        font-family: "Eczar", serif;
+        font-size: 12px;
+        padding: 10px;
+
+        h1{
+            letter-spacing: 5px;
+        }
+    }
+}
+
+
+.input:focus ~ label, .textarea:focus ~ label, .input:valid ~ label, .textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #ff6c00;
+    top: -10px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styledInput {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .styledInput {
+        width:100%;
+    }
+}
+
+.styledInput{
+    
+    label {
+        color: #999;
+        padding: 1.3rem 30px 1rem 30px;
+        position: absolute;
+        // top: 10px;
+        left: 0;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        pointer-events: none;
+    }
+
+    .wide { 
+        width: 650px;
+        max-width: 100%;
+    }
+}
+
+.input,
+.textarea {
+    padding: 20px 80px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    color: #2d2d2d;
+    background-color: #ebecf0;
+    border-radius: 4px;
+    font-size: 15px;
+    box-shadow: inset 2px 2px 5px #babecc,inset -5px -5px 10px #fff;
+}
+
+.input:focus,
+.textarea:focus { outline: 0; }
+
+.input:focus ~ span,
+.textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.inputHolder {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+    
+    .fullLength{
+        display: flex;
+        width: 100%;
+        &>div{
+            flex-grow: 1;
+        }
+    }
+    .halfLength{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.btnHolder{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    .submtBtn {
+        padding: 10px 35px;
+        border-radius: 60px;
+        display: inline-block;
+        background-color: #344964;
+        color: white;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+                  0 2px 10px 0 rgba(0,0,0,0.07);
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+        
+    }
+}
+
+.submtBtn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+              0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+  
+.detailsModal {
+    background: #ffffff;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 20px rgba(black, 0.2);
+    left: 50%;
+    max-width: 90%;
+    pointer-events: all;
+    position: absolute;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    width: 30em;
+    text-align: left;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  
+      .detailsModalTitle {
+        color: #111827;
+        padding: 1.5em 2em;
+        pointer-events: all;
+        position: relative;
+        width: 100%;
+  
+          h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: normal;
+            text-align: center;
+            font-size: 20px;
+            color: darkslateblue;
+          }
+      }
+  
+      .detailsModalContent {
+        border-top: 1px solid #e0e0e0;
+        padding: 2em;
+        pointer-events: all;
+        overflow: auto;
+      }
+  }
+
+  .okeyBtn{
+    padding: 10px;
+    font-size: 15px;
+    width: 55%;
+    margin: 0 auto 20px;
+    border: 1px solid #155697;
+    outline: 0;
+    background: aliceblue;
+    color: #155697;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+@media (max-width: 768px) {
+    .inputHolder{
+        width: auto;
+    }
+    .submtBtn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }
+}
+
+@media only screen and (max-device-width: 1400px) {
+    .sectionHolder{
+        padding: 2rem 5rem;
+    }
+}
+
+@media only screen and (max-device-width: 600px) {
+    .sectionHolder{
+        padding: 0rem;
+    }
+    .sampleTitle{
+        font-size: 20px; 
+        margin-bottom: 15px; 
+    }
+    .testimonialHolder{
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,61 @@
+.visaInfoHolder{
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    width: 50%;
+
+    .title{
+        width: 100%;
+        text-align: center;
+        background-color: #C37172;
+        color: white;
+        font-size: 2rem;
+        padding: 10px 0;
+        border-radius: 7px 7px 0px 0px;
+    }
+
+    .details{
+        div{
+            background: #3b3753;
+            margin: 15px 0;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg{
+            margin-right: 10px;
+        }
+    }
+
+    .visaButton{
+        text-align: end;
+        margin: 25px;
+
+        a{
+            padding: 10px 25px;
+            color: brown;
+            border: 1px solid;
+            background: #fff6f6;
+            border-radius: 6px;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 500px) {
+    .visaInfoHolder{
+        width: 100%;
+        .details{
+            div{
+                padding: 10px;
+            }
+            svg{
+                height: 25px;
+                width: 50px;
+            }
+        }
+    }
+}

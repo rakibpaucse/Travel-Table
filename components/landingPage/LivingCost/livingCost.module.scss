@@ -16,7 +16,7 @@
     color: white;
 }
 
-.singleCost{
+.singleCost{ 
     @include singleCoseMixin();
 
     span{

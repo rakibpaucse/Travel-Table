@@ -83,7 +83,7 @@ const CompareDetails = ({cityList}:any) => {
         localCurrercyTo.currencyCode = cityList.toCity.currency
     
 
-    return (
+    return ( 
         <div className={Style.compareHolder} >
             <div className={Style.infoHolder} >
                 <LivingCost localLivingCost={localLivingCostFrom} />

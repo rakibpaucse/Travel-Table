@@ -6,15 +6,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    div:last-child{
-        margin-left: 20px;
+    & > div{
+        width: 48.5%;
     }
+
 }
 
 @media only screen and (max-device-width: 480px) {
     .infoHolder{
         div{
             flex-grow: 1;
+            width: 100%;
         }
         div:last-child{
             margin: 0;

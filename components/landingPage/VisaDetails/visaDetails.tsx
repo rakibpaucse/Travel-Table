@@ -5,7 +5,7 @@ import { camelCaseToNormal , makePlain } from 'utils/helpers'
 
 
 const VisaDetails = ({localVisaInfo}:any) => {
-console.log(localVisaInfo)
+
     const icons = [
         <UilFileBookmarkAlt  />,
         <UilTelegram />,

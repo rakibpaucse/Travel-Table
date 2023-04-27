@@ -19,7 +19,7 @@ const Compare = () => {
 
     const { data:cityList , isLoading , isFetching  ,  isSuccess , isError } = useGetComparedCityQuery(fetchArg , {refetchOnMountOrArgChange:true} )
 
-console.log(cityList)
+
     const flyHandler = () => {
         let from = fromValue.city
         let to = toValue.city

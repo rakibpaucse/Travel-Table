@@ -96,7 +96,7 @@ const Cities = () => {
     if (!isLoading && isError) { content = <Error />; }
 
     if (!isLoading && !isError && isSuccess ) {
-        console.log(backupOfAllCities);
+        
         
         content =    
                 <>

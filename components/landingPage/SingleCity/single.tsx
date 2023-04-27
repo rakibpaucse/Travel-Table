@@ -113,7 +113,7 @@ const SingleCity = ({ city , country } : any) => {
             </>
 
     }
-console.log(localDetails);
+
 
     return (
         <div className={Style.container}>

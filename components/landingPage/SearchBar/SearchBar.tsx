@@ -59,7 +59,7 @@ const SearchBar = ({rightPadding=0 , setClicked}:any) => {
                                     {
                                         (keyword.length > 0 && !seleted) ?
                                         <div className={Style.ulHolder} 
-                                        onBlur={ (e) => console.log('asdfasd') } > 
+                                        onBlur={ (e) => console.log('a') } > 
                                     
                                             <div className={Style.suggHolder} >
                                                 {

@@ -16,7 +16,6 @@ export const testApi = createApi({
 
     getAllCities: builder.query({
       query: (pageNo) => {
-        console.log(pageNo);
         return `/city/allCities?page=${pageNo}`
       },
       transformResponse : (response:any) => {

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Style from './filter.module.scss'
-
+import { UilPlus } from '@iconscout/react-unicons'
 
  
 const Filter = ({filterOptions  , setFilterOptions , setSearchItem , defaultFilterOption}:any) => {
@@ -56,11 +56,11 @@ const Filter = ({filterOptions  , setFilterOptions , setSearchItem , defaultFilt
                     {
                         Object.keys(conditions).map( condition => <span> {`${condition} _  ${conditions[condition]}`} </span>)
                     }
-                </div>
+                </div> 
                 
                 <div className={Style.infoHolder} >
                     <details className={Style.costOfLiving} >
-                        <summary >  <span>Cost Of Living </span>  </summary>
+                        <summary > <span className={Style.sumIcon}><UilPlus /></span> <span>Cost Of Living </span>  </summary>
                             <div className={Style.buttonHolder} >
                                 <div title="monthlyCostOfLiving" onClick={handleButtonClick} > {`<  1400 / M`}  </div>
                                 <div title="monthlyCostOfLiving" onClick={handleButtonClick} > {`<  2200 / M`}  </div>
@@ -69,8 +69,8 @@ const Filter = ({filterOptions  , setFilterOptions , setSearchItem , defaultFilt
                             </div>
                     </details>
 
-                    <details className={Style.polulation}>
-                        <summary>  <span>Population </span></summary>
+                    <details className={Style.polulation} >
+                        <summary> <span className={Style.sumIcon}><UilPlus /></span> <span>Population </span> </summary>
                         <div className={Style.buttonHolder} >
                                 <div title="population" onClick={handleButtonClick} > {`< 80,000 `}  </div>
                                 <div title="population" onClick={handleButtonClick} > {`< 2,50,000  `}  </div>
@@ -80,7 +80,7 @@ const Filter = ({filterOptions  , setFilterOptions , setSearchItem , defaultFilt
                     </details>
                     
                     <details className={Style.internet} >
-                        <summary>  <span>Internet Speed</span> </summary>
+                        <summary> <span className={Style.sumIcon}><UilPlus /></span> <span>Internet Speed</span> </summary>
                             <div className={Style.buttonHolder} >
                                 <div title="internet" onClick={handleButtonClick} > {`<  30 / MBPS`}  </div>
                                 <div title="internet" onClick={handleButtonClick} > {`<  75 / MBPS`}  </div>
@@ -89,8 +89,8 @@ const Filter = ({filterOptions  , setFilterOptions , setSearchItem , defaultFilt
                             </div>
                     </details>
                     
-                    <details className={Style.crime}>
-                        <summary>  <span>Crime Levels</span></summary>
+                    <details className={Style.crime} >
+                        <summary> <span className={Style.sumIcon}><UilPlus /></span> <span>Crime Levels</span></summary>
                         <div className={Style.buttonHolder} >
                                 <div title="crimeIndex" onClick={handleButtonClick} > {`< 35 LOW`}  </div>
                                 <div title="crimeIndex" onClick={handleButtonClick} > {`< 65 MOD `}  </div>
@@ -99,8 +99,8 @@ const Filter = ({filterOptions  , setFilterOptions , setSearchItem , defaultFilt
                             </div>
                     </details>
 
-                    <details className={Style.safety}>
-                        <summary>  <span> Safety Levels</span></summary>
+                    <details className={Style.safety} >
+                        <summary> <span className={Style.sumIcon}><UilPlus /></span> <span> Safety Levels</span></summary>
                         <div className={Style.buttonHolder} >
                                 <div title="safetyIndex" onClick={handleButtonClick} > {`< 35 LOW`}  </div>
                                 <div title="safetyIndex" onClick={handleButtonClick} > {`< 60 MOD `}  </div>

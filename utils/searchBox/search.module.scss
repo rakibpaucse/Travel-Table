@@ -5,8 +5,9 @@
     .fromBoxSearch{
         display: flex; 
         justify-content: flex-end;
+        position: relative;
     
-        &>div{
+        & > .searchBoxImage {
             width: 50px;
             height: 50px;
             display: flex;
@@ -19,6 +20,14 @@
                 width: 25px;
                 height: 25px;
             }
+        }
+
+        & > .crossBoxSearch{
+            position: absolute;
+            right: 12px;
+            top: 25%;
+            cursor: pointer;
+            color: black;
         }
     
         &>input {
@@ -44,10 +53,11 @@
     .suggHolder{
         color: black;
         z-index: 10;
+        width: 90%;
     
         .sugg{
             margin-bottom: 2px;
-            background: #f0f8ff;
+            background: #fff3f3;
             padding: 6px 45px;
             width: 100%;
             border-radius: 5px;

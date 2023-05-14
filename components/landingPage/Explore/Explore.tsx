@@ -26,15 +26,13 @@ const Explore = () => {
 
                         <div className={Style.fromToImage}>
                             <Image src={FromTo} alt='explore' />
-                        </div>
+                        </div> 
 
                         <div className={Style.fromBoxContainer}>
                             <div className={Style.fromBox}>
                                 <p>To The City/Country</p>
                                 <div className={Style.fromBoxSearch}>
                                     <SearchTheCity placeHolder='Dhaka' setValue={setFromvalue} />
-                                    {/* <div><Image src={SearchImg} alt='search' /></div>
-                                    <input type="text" name="" id="" /> */}
                                 </div>
                                 
                             </div>

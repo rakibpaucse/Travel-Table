@@ -14,13 +14,6 @@ import VisaDetails from 'components/landingPage/VisaDetails/visaDetails';
 import SomeCityInfo from 'components/landingPage/SomeCityInfo/someCityInfo';
 import Weather from 'components/landingPage/WeatherUpdate/weather';
 
-// interface IValue {
-//     prop: string
-// }
-
-// interface MyType {
-//     [name: string]: IValue;
-// }
 
 const SingleCity = ({ city , country } : any) => {
 

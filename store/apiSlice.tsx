@@ -2,7 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 import { HYDRATE } from 'next-redux-wrapper'
 
 const baseQuery = fetchBaseQuery({
-    baseUrl : "https://thikori.shaheenagrofood.com",
+    // baseUrl : "http://localhost:8081/",
+    baseUrl : "https://travel-table.onrender.com/",
 })
 
 export const apiSlice = createApi({

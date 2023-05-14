@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React, { useState , useEffect} from 'react'
-import { useGetCitiesQuery , useGetCitiesByPostMutation } from 'store/citySlice/cityApi'
+import { useGetCitiesByPostMutation } from 'store/citySlice/cityApi'
 import Error from 'utils/Error'
 import Loader from 'utils/loader'
 import {getRandomImg} from 'utils/helpers'
@@ -89,12 +89,22 @@ const Cities = () => {
    
     let content = null; 
 
-    if (isLoading) {
-        content = ( <div className={Style.right} > { <><Loader/><Loader/><Loader/></>  }</div> );
+    if (isLoading) { 
+        content = ( <div className={Style.right} style={{marginBottom:80, textAlign:'center'}} > 
+                        { 
+                            <div className={Style.loaderHolder} > 
+                                <span className={Style.fLoader}><Loader /></span> 
+                                <span className={Style.mLoader}><Loader/></span> 
+                                <span className={Style.mlLoader}><Loader/></span> 
+                                <span className={Style.lLoader}><Loader /></span> 
+                            </div> 
+                        }
+                    </div> ); 
     }
 
-    if (!isLoading && isError) { content = <Error />; }
 
+    if (!isLoading && isError) { content = <Error />; }
+ 
     if (!isLoading && !isError && isSuccess ) {
         
         
@@ -119,14 +129,10 @@ const Cities = () => {
                         }
                     </div>
  
-                    {/* {
-                        !isSuccess && <div className={Style.right} > <Loader/><Loader/><Loader/></div>
-                    } */}
 
                     <div className={Style.rightButton}>
                         { backupOfAllCities[0]?.length ? 
-                            // <Image width='70' height='70' src={Loading} alt='Loading' /> :
-                                newCities.length < 48 ?
+                                allCities.flat().length < 48 ?
                                     <div className={Style.noMore}> No More Cities </div> :
                                     <button onClick={() => setPageNo( prev => prev+=1 )} > Load More </button> 
                             : <Error msg='No Cities Found' />  

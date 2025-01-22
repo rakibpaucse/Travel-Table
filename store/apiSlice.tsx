@@ -3,7 +3,8 @@ import { HYDRATE } from 'next-redux-wrapper'
 
 const baseQuery = fetchBaseQuery({
     // baseUrl : "http://localhost:8081/",
-    baseUrl : "https://travel-table.onrender.com/",
+    // baseUrl : "https://travel-table.onrender.com/",
+    baseUrl : "https://rakib-travel.mrgreenapps.com/"
 })
 
 export const apiSlice = createApi({
